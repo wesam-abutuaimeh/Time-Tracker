@@ -2,21 +2,66 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timer</title>
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <!-- css -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
+    <main>
+        <div class="container">
+            <div class="timer">
+                <!-- ! Start Timer Options Tab -->
+                <ul>
+                    <li data-type="timer" id="timer">timer</li>
+                    <li data-type="stopWatch" id="stopWatch">stopwatch</li>
+                </ul>
+                <!-- ! End Timer Options Tab -->
+                
+                <!-- ! Start timer area section -->
+                <div class="timer-area" id="timer-area">
+                    <div class="inputs" id="inputs">
+                        <input type="number" name="hours" id="hours" maxlength="2" value="00" />
+                        <input type="number" name="minutes" id="minutes" maxlength="2" value="05" />
+                        <input type="number" name="seconds" id="seconds" maxlength="2" value="00" />
+                    </div>
+                    <div class="progress" id="progress"></div>
+                    <div class="control-btns" id="control-btns">
+                        <button type="submit" id="submit"><span>start</span></button>
+                        <button type="reset" id="reset"><span>reset</span></button>
+                    </div>
+                </div>
+                <!-- ! End timer area section -->
+
+                <!-- ! Start stopwatch area Start -->
+                <div class="stopWatch" id="stopWatch-area">
+                    <div class="inputs" id="inputs">
+                        <input type="number" name="hours" id="stopWatch-hours" maxlength="2" value="00" />
+                        <input type="number" name="minutes" id="stopWatch-minutes" maxlength="2" value="00" />
+                        <input type="number" name="seconds" id="stopWatch-seconds" maxlength="2" value="00" />
+                    </div>
+                    <div class="control-btns" id="stopWatch-control-btns">
+                        <button type="submit" id="stopWatch-submit">
+                            <span>start</span>
+                        </button>
+                        <button type="reset" id="stopWatch-reset">
+                            <span>reset</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- ! End stopwatch area section -->
+            </div>
+        </div>
+    </main>
     <!-- js -->
     <script src="index.js"></script>
 </body>
